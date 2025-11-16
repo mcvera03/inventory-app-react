@@ -1,0 +1,1 @@
+export default function Config(){ return (<div><h2>Configuración</h2><p>Ajustes de la aplicación</p></div>) }
