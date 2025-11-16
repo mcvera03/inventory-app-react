@@ -1,1 +1,2 @@
-export default function Home(){return (<div style={{textAlign:'center'}}><h1>INVENTORY MANAGEMENT</h1><p>Tu inventario, simplificado</p><div><a href='/login' class='button'>Inicio de sesión</a> <a href='/signup' class='button-secondary'>Crear cuenta</a></div></div>)}
+import React from 'react'
+export default function Home(){return (<div style={{textAlign:'center',padding:40}}><h1>INVENTORY MANAGEMENT</h1><p>Tu inventario, simplificado</p><div style={{marginTop:20}}><a href='/login' class='button'>Inicio de sesión</a> <a href='/signup' class='button-secondary'>Crear cuenta</a></div></div>)}
