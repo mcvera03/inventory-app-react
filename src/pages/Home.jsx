@@ -1,2 +1,0 @@
-import React from 'react'
-export default function Home(){ return (<div className='home'><div><h1>INVENTORY MANAGEMENT</h1><p className='lead'>Tu inventario, simplificado</p><div className='cta'><a href='/login' className='button'>Inicio de sesión</a> <a href='/signup' className='button-secondary'>Crear cuenta</a></div></div><div><img src='/src/assets/principal.png' alt='logo' style={{width:180}}/></div></div>) }
