@@ -1,0 +1,12 @@
+:root{--blue:#0b56a1;--pill-radius:24px}
+body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin:0;background:#fff;color:#111}
+.navbar{display:flex;gap:12px;justify-content:center;padding:24px 12px}
+.pill{background:var(--blue);color:white;padding:10px 20px;border-radius:24px;text-decoration:none;font-weight:600}
+.container{max-width:1000px;margin:30px auto;padding:0 18px}
+.center{text-align:center}
+.form-card{max-width:520px;margin:20px auto;padding:18px;border-radius:8px}
+.input, textarea{width:100%;padding:12px;margin:6px 0;border-radius:18px;border:1px solid #ddd}
+.button{background:var(--blue);color:white;border:none;padding:10px 16px;border-radius:8px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px}
+.card{padding:18px;border-radius:10px;border:1px solid #eee;text-align:center}
+.logo{max-width:140px;margin:12px auto;display:block}
