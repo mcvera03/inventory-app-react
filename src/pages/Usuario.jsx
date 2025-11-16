@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function Usuario(){
+  return (
+    <div>
+      <h1>Usuario</h1>
+      <p>Perfil y configuración de usuario (próximo)</p>
+    </div>
+  )
+}
