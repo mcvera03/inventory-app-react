@@ -1,2 +1,2 @@
 import React from 'react'
-export default function Home(){return (<div style={{textAlign:'center',padding:40}}><h1>INVENTORY MANAGEMENT</h1><p>Tu inventario, simplificado</p><div style={{marginTop:20}}><a href='/login' class='button'>Inicio de sesión</a> <a href='/signup' class='button-secondary'>Crear cuenta</a></div></div>)}
+export default function Home(){ return (<div className='home'><div><h1>INVENTORY MANAGEMENT</h1><p className='lead'>Tu inventario, simplificado</p><div className='cta'><a href='/login' className='button'>Inicio de sesión</a> <a href='/signup' className='button-secondary'>Crear cuenta</a></div></div><div><img src='/src/assets/principal.png' alt='logo' style={{width:180}}/></div></div>) }
