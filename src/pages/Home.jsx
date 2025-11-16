@@ -1,15 +1,1 @@
-import React from 'react'
-
-export default function Home(){
-  return (
-    <div className="home-hero">
-      <div>
-        <h1 className="hero-title">INVENTORY<br/>MANAGEMENT</h1>
-        <div className="hero-sub">Tu inventario, simplificado</div>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/140" alt="logo"/>
-      </div>
-    </div>
-  )
-}
+export default function Home(){return (<div style={{textAlign:'center'}}><h1>INVENTORY MANAGEMENT</h1><p>Tu inventario, simplificado</p><div><a href='/login' class='button'>Inicio de sesión</a> <a href='/signup' class='button-secondary'>Crear cuenta</a></div></div>)}

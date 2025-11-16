@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Link, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -11,26 +11,5 @@ import Usuario from './pages/Usuario'
 import Configuracion from './pages/Configuracion'
 import Ayuda from './pages/Ayuda'
 import Navbar from './components/Navbar'
-
-export default function App(){
-  return (
-    <div>
-      <Navbar/>
-      <main style={{padding:20}}>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/signup" element={<Signup/>}/>
-          <Route path="/productos" element={<Productos/>}/>
-          <Route path="/categorias" element={<Categorias/>}/>
-          <Route path="/proveedores" element={<Proveedores/>}/>
-          <Route path="/reportes" element={<Reportes/>}/>
-          <Route path="/usuario" element={<Usuario/>}/>
-          <Route path="/configuracion" element={<Configuracion/>}/>
-          <Route path="/ayuda" element={<Ayuda/>}/>
-          <Route path="*" element={<Navigate to="/" replace/>}/>
-        </Routes>
-      </main>
-    </div>
-  )
-}
+import ProtectedRoute from './components/ProtectedRoute'
+export default function App(){return (<div><Navbar/><main style={{padding:20}}><Routes><Route path='/' element={<Home/>}/><Route path='/login' element={<Login/>}/><Route path='/signup' element={<Signup/>}/><Route path='/productos' element={<ProtectedRoute><Productos/></ProtectedRoute>}/><Route path='/categorias' element={<ProtectedRoute><Categorias/></ProtectedRoute>}/><Route path='/proveedores' element={<ProtectedRoute><Proveedores/></ProtectedRoute>}/><Route path='/reportes' element={<ProtectedRoute><Reportes/></ProtectedRoute>}/><Route path='/usuario' element={<ProtectedRoute><Usuario/></ProtectedRoute>}/><Route path='/configuracion' element={<ProtectedRoute><Configuracion/></ProtectedRoute>}/><Route path='/ayuda' element={<ProtectedRoute><Ayuda/></ProtectedRoute>}/><Route path='*' element={<Navigate to='/' replace/>}/></Routes></main></div>)}
