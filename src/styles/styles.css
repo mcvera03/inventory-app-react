@@ -1,0 +1,12 @@
+:root{--primary:#3867CF}
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;margin:0;background:#f4f6fb;color:#222}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--primary);color:#fff}
+.topnav .logo{height:40px}
+.topnav .links a, .topnav .links button{margin-left:8px;color:#fff;text-decoration:none;background:transparent;border:none;cursor:pointer}
+.container{padding:20px}
+.card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+input, select, textarea, button{padding:8px;border-radius:6px;border:1px solid #ddd}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:8px;border-bottom:1px solid #eee;text-align:left}
+.center{display:flex;gap:8px;align-items:center}
