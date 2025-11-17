@@ -1,1 +1,0 @@
-export default function Help(){ return (<div><h2>Ayuda y Soporte</h2><p>Contacta a soporte@tusitio.com</p></div>) }
