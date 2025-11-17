@@ -1,0 +1,1 @@
+export default function Home(){return (<div><h1>Descripción de la empresa</h1><p>Empresa dedicada a soluciones de inventario.</p></div>)}

@@ -1,0 +1,1 @@
+export default function Providers(){return (<div><h2>Proveedores</h2></div>)}

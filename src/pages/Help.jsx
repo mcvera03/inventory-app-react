@@ -1,0 +1,1 @@
+export default function Help(){return (<div><h2>Ayuda</h2></div>)}
