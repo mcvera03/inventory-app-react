@@ -1,1 +1,0 @@
-export default function Alerts(){return (<div><h2>Alertas</h2></div>)}
