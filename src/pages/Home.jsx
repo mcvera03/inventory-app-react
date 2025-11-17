@@ -1,0 +1,1 @@
+export default function Home(){return (<div className='container'><div className='card'><h1 style={{color:'#3867CF'}}>Inventory Management</h1><p>Descripción de la empresa y contenido principal.</p></div></div>)}
