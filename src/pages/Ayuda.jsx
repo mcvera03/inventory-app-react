@@ -1,0 +1,1 @@
+export default function Ayuda(){return <h2>Ayuda Page</h2>;}

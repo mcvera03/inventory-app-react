@@ -1,0 +1,1 @@
+export default function Categorias(){return <h2>Categorias Page</h2>;}

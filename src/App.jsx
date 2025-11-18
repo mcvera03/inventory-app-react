@@ -1,0 +1,1 @@
+import Navbar from './components/Navbar.jsx';export default function App(){return (<><Navbar/><h1>Inventory App</h1></>);}

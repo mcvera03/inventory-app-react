@@ -1,0 +1,1 @@
+export default function Entradas(){return <h2>Entradas Page</h2>;}

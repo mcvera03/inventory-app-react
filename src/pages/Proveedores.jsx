@@ -1,0 +1,1 @@
+export default function Proveedores(){return <h2>Proveedores Page</h2>;}

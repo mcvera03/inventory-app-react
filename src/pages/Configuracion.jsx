@@ -1,0 +1,1 @@
+export default function Configuracion(){return <h2>Configuracion Page</h2>;}
