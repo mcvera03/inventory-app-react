@@ -1,0 +1,20 @@
+:root{
+  --primary:#3867CF;
+  --muted:#f3f4f6;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;margin:0;background:var(--muted);color:#111}
+.app{display:flex;min-height:100vh}
+.main{flex:1;padding:20px}
+.navbar{background:var(--primary);color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;letter-spacing:0.5px}
+.nav-links a{color:white;margin-right:12px;text-decoration:none}
+.container{max-width:1000px;margin:20px auto;background:var(--card);padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.form-card{max-width:480px;margin:30px auto;padding:20px;border-radius:8px;background:white}
+.input{display:block;width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ddd}
+.button{background:var(--primary);color:white;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid #eee;text-align:left}
+.row-actions button{margin-right:8px}
+.logo{height:48px}

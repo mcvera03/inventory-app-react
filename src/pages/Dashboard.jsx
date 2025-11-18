@@ -1,0 +1,1 @@
+export default function Dashboard(){return (<div className='container'><h2>Dashboard</h2><p>Resumen rápido de inventario y actividad.</p></div>)}
