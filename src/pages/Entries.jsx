@@ -1,1 +1,0 @@
-export default function Entries(){return <h1>Entries Page</h1>}

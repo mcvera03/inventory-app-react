@@ -1,1 +1,0 @@
-export default function Alertas(){return <h2>Alertas Page</h2>;}

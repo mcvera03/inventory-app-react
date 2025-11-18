@@ -1,1 +1,0 @@
-export default function Usuarios(){return <h2>Usuarios Page</h2>;}

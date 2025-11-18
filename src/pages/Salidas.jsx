@@ -1,1 +1,0 @@
-export default function Salidas(){return <h2>Salidas Page</h2>;}

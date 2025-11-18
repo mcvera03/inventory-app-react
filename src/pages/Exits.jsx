@@ -1,1 +1,0 @@
-export default function Exits(){return <h1>Exits Page</h1>}
