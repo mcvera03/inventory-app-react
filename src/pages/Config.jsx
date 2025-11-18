@@ -1,1 +1,0 @@
-export default function Config(){ return <div><h2>Configuración</h2></div> }
