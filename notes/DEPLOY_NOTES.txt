@@ -1,5 +1,0 @@
-Deployment notes:
-- Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY as environment variables in Netlify.
-- Run supabase_schema.sql in Supabase SQL editor.
-- Replace images in public/images/
-- If you want server-side joins create an RPC to join products+names (optional)
