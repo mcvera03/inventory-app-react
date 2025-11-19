@@ -8,20 +8,23 @@ export default function Home() {
 
       <p className="max-w-4xl text-gray-700 mb-10 leading-relaxed text-center">
         Nuestra empresa se dedica al desarrollo e implementación de soluciones
-        tecnológicas para la gestión integral de inventarios. Ofrecemos herramientas
-        diseñadas para optimizar los procesos de control, almacenamiento y
+        tecnológicas para la gestión integral de inventarios.
+        <br /><br />
+        Ofrecemos herramientas diseñadas para optimizar los procesos de control, almacenamiento y
         distribución de productos, garantizando precisión, eficiencia y trazabilidad
         en cada etapa de la cadena de suministro.
         <br /><br />
         A través de una plataforma moderna, segura y adaptable a distintos sectores,
         ayudamos a las organizaciones a mejorar la toma de decisiones operativas,
         reducir costos logísticos y mantener una administración de inventario
-        confiable y transparente. Nuestro compromiso es impulsar la excelencia
+        confiable y transparente. 
+        <br /><br />
+        Nuestro compromiso es impulsar la excelencia
         operativa mediante la innovación y la tecnología.
       </p>
 
       <img
-        src="/principal.svg"
+        src="/principal.png"
         alt="Imagen principal"
         className="w-64 h-auto mx-auto"
       />
