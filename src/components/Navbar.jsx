@@ -32,9 +32,7 @@ export default function Navbar(){
         <Link to="/productos" className="pill">Producto</Link>
         <Link to="/categorias" className="pill">Categorias</Link>
         <Link to="/proveedores" className="pill">Proveedores</Link>
-        <Link to="/alertas" className="pill">Alertas</Link>
-
-        {/* ✅ AGREGAMOS ESTOS */}
+       
         <Link to="/configuracion" className="pill">Configuración</Link>
         <Link to="/soporte" className="pill">Ayuda y Soporte</Link>
       </div>
