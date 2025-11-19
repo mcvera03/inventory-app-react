@@ -10,7 +10,6 @@ import Categories from './pages/Categories'
 import Providers from './pages/Providers'
 import Settings from './pages/Settings'
 import Help from './pages/Help'
-import Reports from './pages/Reports'
 import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App(){
