@@ -29,7 +29,8 @@ export default function Help() {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8 flex flex-col items-center">
+    // 1. Aseguramos el fondo blanco de la página completa (bg-white)
+    <div className="min-h-screen bg-white p-8 flex flex-col items-center"> 
       <h2 className="text-4xl font-extrabold mb-10 uppercase text-gray-800">
         Ayuda y Soporte
       </h2>
@@ -38,7 +39,8 @@ export default function Help() {
         {items.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-6 p-5 border border-blue-200 rounded-xl shadow-lg bg-white hover:bg-blue-50 hover:shadow-xl transition duration-300 ease-in-out cursor-pointer"
+            // 2. Aseguramos que la tarjeta interna también sea blanco puro
+            className="flex items-center gap-6 p-5 border border-blue-200 rounded-xl shadow-lg bg-white hover:bg-blue-50 hover:shadow-xl transition duration-300 ease-in-out cursor-pointer" 
           >
             <img 
               src={item.img} 
