@@ -2,9 +2,12 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center p-8 text-center bg-white min-h-screen">
-      <h2 className="text-2xl font-bold mb-6">Descripción de la empresa</h2>
+    <div className="flex flex-col items-center p-10 text-center bg-white min-h-screen">
 
+     
+      <h2 className="text-2xl font-bold mb-6">DESCRIPCION DE LA EMPRESA</h2>
+
+     
       <p className="max-w-3xl text-gray-700 mb-10 leading-relaxed">
         Nuestra empresa se dedica al desarrollo e implementación de soluciones
         tecnológicas para la gestión integral de inventarios. Ofrecemos
@@ -19,12 +22,13 @@ export default function Home() {
         excelencia operativa mediante la innovación y la tecnología.
       </p>
 
-      {/* Imagen centrada y responsiva */}
+     
       <img
-        src="/principal.png"
+        src="/principal.png"   
         alt="Imagen principal"
-        className="w-64 sm:w-80 h-auto mb-8"
+        className="w-72 sm:w-80 h-auto"
       />
+
     </div>
   );
 }
