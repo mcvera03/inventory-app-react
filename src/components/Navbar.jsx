@@ -3,21 +3,35 @@ import { Link, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib_supabase'
 
 export default function Navbar(){
-  const [user, setUser] = useState(null)
+  const [session, setSession] = useState(null)
   const nav = useNavigate()
 
   useEffect(()=>{
-    const s = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
+    const getInitialSession = async () => {
+        const { data: { session: initialSession } } = await supabase.auth.getSession();
+        setSession(initialSession);
+    }
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, newSession) => {
+        setSession(newSession);
     })
-    supabase.auth.getSession().then(r=>setUser(r.data.session?.user ?? null))
-    return ()=> s.data?.subscription?.unsubscribe && s.data.subscription.unsubscribe()
+
+    getInitialSession();
+
+    return () => {
+        if (listener?.subscription) {
+            listener.subscription.unsubscribe();
+        }
+    }
   },[])
 
   const logout = async ()=>{
     await supabase.auth.signOut()
     nav('/login')
   }
+
+  const isAuthenticated = !!session;
+  const userEmail = session?.user?.email || 'Usuario'; 
 
   return (
     <nav className="navbar">
@@ -32,19 +46,23 @@ export default function Navbar(){
         <Link to="/productos" className="pill">Producto</Link>
         <Link to="/categorias" className="pill">Categorias</Link>
         <Link to="/proveedores" className="pill">Proveedores</Link>
-       
+        
         <Link to="/configuracion" className="pill">Configuración</Link>
-       <Link to="/help" className="pill">Ayuda y soporte</Link>
+        <Link to="/help" className="pill">Ayuda y soporte</Link>
       </div>
 
       <div className="nav-right">
-        {!user ? <>
-          <Link to="/login" style={{color:'white',marginRight:10}}>Iniciar sesión</Link>
-          <Link to="/signup" style={{color:'white'}}>Crear cuenta</Link>
-        </> : <>
-          <span style={{marginRight:12}}>Hola</span>
-          <button onClick={logout} className="button">Salir</button>
-        </>}
+        {!isAuthenticated ? (
+          <>
+            <Link to="/login" style={{color:'white',marginRight:10}}>Iniciar sesión</Link>
+            <Link to="/signup" style={{color:'white'}}>Crear cuenta</Link>
+          </>
+        ) : (
+          <>
+            <span style={{marginRight:12}}>Hola, {userEmail}</span> 
+            <button onClick={logout} className="button">Salir</button>
+          </>
+        )}
       </div>
     </nav>
   )
