@@ -1,6 +1,6 @@
 :root{
   --primary:#3867CF;
-  --muted:#ffffff; /* CORRECCIÓN: Cambiado de #f3f4f6 a blanco puro */
+  --muted:#ffffff; /* ESTA DEBE SER LA ÚNICA LÍNEA CAMBIADA A BLANCO */
   --card:#ffffff;
 }
 *{box-sizing:border-box}
