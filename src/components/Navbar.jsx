@@ -22,14 +22,23 @@ export default function Navbar(){
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <Link to="/" className="brand"><img src="/principal.png" className="logo" alt="logo" style={{verticalAlign:'middle',marginRight:8}}/> INVENTORY MANAGEMENT</Link>
+        <Link to="/" className="brand">
+          <img src="/principal.png" className="logo" alt="logo" style={{verticalAlign:'middle', marginRight:8}}/> 
+          INVENTORY MANAGEMENT
+        </Link>
       </div>
-      <div className="nav-center nav-links" style={{flex:1,textAlign:'center'}}>
+
+      <div className="nav-center nav-links" style={{flex:1, textAlign:'center'}}>
         <Link to="/productos" className="pill">Producto</Link>
         <Link to="/categorias" className="pill">Categorias</Link>
         <Link to="/proveedores" className="pill">Proveedores</Link>
         <Link to="/alertas" className="pill">Alertas</Link>
+
+        {/* ✅ AGREGAMOS ESTOS */}
+        <Link to="/configuracion" className="pill">Configuración</Link>
+        <Link to="/soporte" className="pill">Ayuda y Soporte</Link>
       </div>
+
       <div className="nav-right">
         {!user ? <>
           <Link to="/login" style={{color:'white',marginRight:10}}>Iniciar sesión</Link>
