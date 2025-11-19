@@ -11,7 +11,7 @@ import Providers from './pages/Providers'
 import Configuracion from "./pages/Configuracion";
 import Help from './pages/Help'
 import ProtectedRoute from './components/ProtectedRoute'
-import { supabase } from './lib_supabase' // Importamos Supabase aquí
+import { supabase } from './lib_supabase'
 
 export default function App(){
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,6 @@ export default function App(){
   }, []);
 
   if (loading) {
-    // Pantalla de carga global
     return <div className="app loading-screen">Cargando aplicación...</div>; 
   }
 
@@ -67,6 +66,4 @@ export default function App(){
     </div>
   )
 }
-    </div>
-  )
-}
+
