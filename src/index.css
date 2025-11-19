@@ -1,7 +1,7 @@
 :root{
-  --primary:#3867CF;
-  --muted:#f3f4f6;
-  --card:#ffffff;
+  --primary:#3867CF;
+  --muted:#ffffff; /* CORRECCIÓN: Cambiado de #f3f4f6 a blanco puro */
+  --card:#ffffff;
 }
 *{box-sizing:border-box}
 body{font-family:Inter, Arial, sans-serif;margin:0;background:var(--muted);color:#111}
