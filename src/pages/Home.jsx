@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
 export default function Home() {
   return (
     // Contenedor principal: usa flex-col e items-center para centrar el bloque horizontalmente
     <div className="flex flex-col items-center justify-center p-8 bg-white min-h-screen"> 
       
-      {/* Usamos mx-auto y text-center en el contenedor para centrar todo el bloque */}
+      {/* Nuevo contenedor de contenido: max-w-4xl (ancho limitado) y mx-auto (centrado) */}
       <div className="max-w-4xl mx-auto text-center">
 
         <h2 className="text-3xl font-bold mb-8 uppercase text-gray-800">
           DESCRIPCIÓN DE LA EMPRESA
         </h2>
 
-        {/* Cada <p> es un párrafo separado con margen inferior */}
+        {/* Cada <p> es un párrafo, el text-center del div padre los centra */}
         <p className="mb-4 text-lg text-gray-700 leading-relaxed">
           Nuestra empresa se dedica al desarrollo e implementación de soluciones
           tecnológicas para la gestión integral de inventarios.
@@ -35,14 +35,14 @@ export default function Home() {
           Nuestro compromiso es impulsar la excelencia operativa mediante la innovación y la tecnología.
         </p>
 
-        {/* La imagen ya se centra con mx-auto si está dentro de un contenedor centrado */}
+        {/* La imagen ya se centra porque el contenedor principal es text-center */}
         <img
           src="/principal.png"
           alt="Imagen principal"
           className="w-[300px] h-auto mx-auto"
         />
 
-      </div>
+      </div> {/* <-- FIN del contenedor max-w-4xl mx-auto */}
     </div>
   );
 }
