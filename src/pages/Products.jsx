@@ -24,11 +24,7 @@ export default function Products(){
 
   async function createProduct(e){
     e.preventDefault()
-    // CORRECCIONES:
-    // 1. stock -> stock_actual
-    // 2. price -> precio_unitario
-    // 3. id_category -> category_id
-    // 4. id_provider -> provider_id
+  
     const { error } = await supabase.from('products').insert({ 
       name, 
       stock_actual: parseInt(stock), 
@@ -72,13 +68,13 @@ export default function Products(){
             <tr key={p.id}>
               <td>{p.id}</td>
               <td>{p.name}</td>
-              {/* CORRECCIÓN: Usamos p.stock_actual */}
+            
               <td>{p.stock_actual}</td> 
-              {/* CORRECCIÓN: Usamos p.precio_unitario */}
+            
               <td>{p.precio_unitario}</td> 
-              {/* CORRECCIÓN: Usamos p.category_id */}
+            
               <td>{p.category_id}</td> 
-              {/* CORRECCIÓN: Usamos p.provider_id */}
+             
               <td>{p.provider_id}</td> 
               <td className="row-actions"><button onClick={()=>remove(p.id)} className="button">Eliminar</button></td>
             </tr>
