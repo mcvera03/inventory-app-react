@@ -28,7 +28,7 @@ export default function Home() {
       </p>
 
       <img
-   src="/principal.svg"
+   src="/principal.png"
         alt="Imagen principal"
         className="w-[300px] h-auto mx-auto mb-6"
       />
