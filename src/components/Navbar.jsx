@@ -22,7 +22,7 @@ export default function Navbar(){
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <Link to="/" className="brand"><img src="/principal.svg" className="logo" alt="logo" style={{verticalAlign:'middle',marginRight:8}}/> INVENTORY MANAGEMENT</Link>
+        <Link to="/" className="brand"><img src="/principal.png" className="logo" alt="logo" style={{verticalAlign:'middle',marginRight:8}}/> INVENTORY MANAGEMENT</Link>
       </div>
       <div className="nav-center nav-links" style={{flex:1,textAlign:'center'}}>
         <Link to="/productos" className="pill">Producto</Link>
