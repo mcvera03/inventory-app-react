@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { supabase } from '../lib_supabase'
 
 export default function Products(){
+  // ... (Estados sin cambios)
   const [products,setProducts]=useState([])
   const [name,setName]=useState('')
   const [stock,setStock]=useState(0)
@@ -24,7 +25,14 @@ export default function Products(){
 
   async function createProduct(e){
     e.preventDefault()
-    const { error } = await supabase.from('products').insert({ name, stock: parseInt(stock), price: parseFloat(price), id_category: category || null, id_provider: provider || null })
+    // CORRECCIÓN: Se asume que las columnas son 'category_id' y 'provider_id'
+    const { error } = await supabase.from('products').insert({ 
+      name, 
+      stock: parseInt(stock), 
+      price: parseFloat(price), 
+      category_id: category || null, // <-- CORREGIDO
+      provider_id: provider || null // <-- CORREGIDO
+    })
     if(error) return alert(error.message)
     setName(''); setStock(0); setPrice(0); setCategory(''); setProvider('')
     fetchAll()
@@ -40,6 +48,7 @@ export default function Products(){
     <div className="container">
       <h2>Productos</h2>
       <form onSubmit={createProduct} style={{marginBottom:20}}>
+        {/* ... (Inputs sin cambios) */}
         <input className="input" placeholder="Nombre" value={name} onChange={e=>setName(e.target.value)}/>
         <input className="input" placeholder="Stock" type="number" value={stock} onChange={e=>setStock(e.target.value)}/>
         <input className="input" placeholder="Precio" type="number" step="0.01" value={price} onChange={e=>setPrice(e.target.value)}/>
@@ -63,8 +72,9 @@ export default function Products(){
               <td>{p.name}</td>
               <td>{p.stock}</td>
               <td>{p.price}</td>
-              <td>{p.id_category}</td>
-              <td>{p.id_provider}</td>
+              {/* CORRECCIÓN: Usamos el nombre de columna corregido */}
+              <td>{p.category_id}</td> 
+              <td>{p.provider_id}</td> 
               <td className="row-actions"><button onClick={()=>remove(p.id)} className="button">Eliminar</button></td>
             </tr>
           ))}
