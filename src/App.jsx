@@ -29,7 +29,6 @@ export default function App(){
             <Route path="/proveedores" element={<ProtectedRoute><Providers/></ProtectedRoute>} />
             <Route path="/settings" element={<ProtectedRoute><Settings/></ProtectedRoute>} />
             <Route path="/help" element={<ProtectedRoute><Help/></ProtectedRoute>} />
-            <Route path="/reportes" element={<ProtectedRoute><Reports/></ProtectedRoute>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
