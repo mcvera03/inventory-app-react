@@ -11,11 +11,15 @@ export default function Home() {
         tecnológicas para la gestión integral de inventarios.
         <br /><br />
         Ofrecemos herramientas diseñadas para optimizar los procesos de control, almacenamiento y
-        distribución de productos, garantizando precisión, eficiencia y trazabilidad
+        distribución de productos, 
+        <br /><br />
+        garantizando precisión, eficiencia y trazabilidad
         en cada etapa de la cadena de suministro.
         <br /><br />
         A través de una plataforma moderna, segura y adaptable a distintos sectores,
-        ayudamos a las organizaciones a mejorar la toma de decisiones operativas,
+        ayudamos a las organizaciones a mejorar la toma 
+        <br /><br />
+        de decisiones operativas,
         reducir costos logísticos y mantener una administración de inventario
         confiable y transparente. 
         <br /><br />
@@ -24,9 +28,9 @@ export default function Home() {
       </p>
 
       <img
-        src="/principal.png"
+   src="/principal.svg"
         alt="Imagen principal"
-        className="w-64 h-auto mx-auto"
+        className="w-[300px] h-auto mx-auto mb-6"
       />
 
     </div>
