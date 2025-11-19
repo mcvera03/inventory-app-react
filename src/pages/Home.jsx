@@ -20,11 +20,11 @@ export default function Home() {
         excelencia operativa mediante la innovación y la tecnología.
       </p>
 
-      <img
-        src={principal}
-        alt="Imagen principal"
-        className="w-80 h-auto mb-8"
-      />
+     <img
+  src="/principal.svg"
+  alt="Imagen principal"
+  className="w-80 h-auto mb-8"
+/>
     </div>
   );
 }
