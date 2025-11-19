@@ -6,7 +6,8 @@ export default function Providers(){
   const [name,setName]=useState('');
   const [phone,setPhone]=useState('');
   const [email,setEmail]=useState('');
-  const [address,setAddress]=useState('');
+
+  const [contact,setContact]=useState(''); 
 
   useEffect(()=> fetchAll(),[])
 
@@ -17,8 +18,11 @@ export default function Providers(){
 
   async function create(e){
     e.preventDefault()
-    await supabase.from('providers').insert({ name, phone, email, address })
-    setName(''); setPhone(''); setEmail(''); setAddress('')
+    
+    await supabase.from('providers').insert({ name, phone, email, contact })
+    setName(''); setPhone(''); setEmail(''); 
+  
+    setContact('') 
     fetchAll()
   }
 
@@ -35,7 +39,7 @@ export default function Providers(){
         <input className="input" placeholder="Nombre" value={name} onChange={e=>setName(e.target.value)}/>
         <input className="input" placeholder="Telefono" value={phone} onChange={e=>setPhone(e.target.value)}/>
         <input className="input" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)}/>
-        <input className="input" placeholder="Direccion" value={address} onChange={e=>setAddress(e.target.value)}/>
+        <input className="input" placeholder="Direccion" value={contact} onChange={e=>setContact(e.target.value)}/>
         <button className="button" type="submit">Agregar proveedor</button>
       </form>
 
@@ -46,6 +50,7 @@ export default function Providers(){
             <tr key={d.id}>
               <td>{d.id}</td>
               <td>{d.name}</td>
+      
               <td>{d.email || d.phone}</td>
               <td><button className="button" onClick={()=>del(d.id)}>Eliminar</button></td>
             </tr>
