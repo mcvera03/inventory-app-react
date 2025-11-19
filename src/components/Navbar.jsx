@@ -28,7 +28,6 @@ export default function Navbar(){
         <Link to="/productos" className="pill">Producto</Link>
         <Link to="/categorias" className="pill">Categorias</Link>
         <Link to="/proveedores" className="pill">Proveedores</Link>
-        <Link to="/reportes" className="pill">Reportes</Link>
         <Link to="/alertas" className="pill">Alertas</Link>
       </div>
       <div className="nav-right">
