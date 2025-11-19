@@ -34,7 +34,7 @@ export default function Navbar(){
         <Link to="/proveedores" className="pill">Proveedores</Link>
        
         <Link to="/configuracion" className="pill">Configuración</Link>
-        <Link to="/soporte" className="pill">Ayuda y Soporte</Link>
+       <Link to="/help" className="pill">Ayuda y soporte</Link>
       </div>
 
       <div className="nav-right">
