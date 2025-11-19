@@ -8,7 +8,6 @@ import Dashboard from './pages/Dashboard'
 import Products from './pages/Products'
 import Categories from './pages/Categories'
 import Providers from './pages/Providers'
-import Settings from './pages/Settings'
 import Configuracion from "./pages/Configuracion";
 import Help from './pages/Help'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -27,8 +26,9 @@ export default function App(){
             <Route path="/productos" element={<ProtectedRoute><Products/></ProtectedRoute>} />
             <Route path="/categorias" element={<ProtectedRoute><Categories/></ProtectedRoute>} />
             <Route path="/proveedores" element={<ProtectedRoute><Providers/></ProtectedRoute>} />
-            <Route path="/settings" element={<ProtectedRoute><Settings/></ProtectedRoute>} />
-            <Route path="/configuracion" element={<Configuracion />} />
+            
+            <Route path="/configuracion" element={<ProtectedRoute><Configuracion/></ProtectedRoute>} />
+            
             <Route path="/help" element={<ProtectedRoute><Help/></ProtectedRoute>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
